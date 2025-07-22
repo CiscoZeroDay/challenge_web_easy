@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - DATAPROTECT</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <div class="logo">Data<span>Protect</span></div>
+      <ul>
+        <li><a href="#acceuil">Acceuil</a></li>
+        <li><a href="#infos">Informations internes</a></li>
+        <li><a href="#download">Rapport de stage</a></li>
+        <li><a href="/logout" class="btn login">Se déconnecter</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Secure Everything.<br><span>Trust No One.</span></h1>
+      <p>Protect your systems from the inside out. Real-time detection, encryption, and defense at scale.</p>
+      <div class="section" id="download">
+      <h2>Télécharger le Rapport de Stage</h2>
+      <p>Votre rapport est disponible en PDF :</p>
+      <a href="/download_rapport" class="btn cta">Télécharger</a>
+    </div>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="feature">
+      <h2>🛡️ Firewall</h2>
+      <p>Advanced perimeter defense with adaptive threat blocking.</p>
+    </div>
+    <div class="feature">
+      <h2>🔍 Threat Monitor</h2>
+      <p>Track malicious behavior with AI-powered analysis 24/7.</p>
+    </div>
+    <div class="feature">
+      <h2>🔐 Encryption</h2>
+      <p>Military-grade data protection for your most valuable assets.</p>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>Why CyberGuard?</h2>
+    <p>Cyber threats evolve every second. We help you stay one step ahead with smart, fast, and scalable solutions. No compromise. No excuses.</p>
+  </section>
+
+  <section class="testimonial">
+    <div class="testimonial-content">
+      <p>"Since integrating CyberGuard, we’ve blocked 98% more attacks in real-time. Our infrastructure has never been more secure."</p>
+      <span>- IT Manager @ FinTech Corp</span>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="#">Network Security</a></li>
+          <li><a href="#">Data Protection</a></li>
+          <li><a href="#">Compliance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Report Issue</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">© 2025 DataProtect. All rights reserved.</p>
+  </footer>
+</body>
+</html>

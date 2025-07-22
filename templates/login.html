@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion - DATAPROTECT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(-45deg, #c62828, #ffffff, #c62828, #ffffff);
+      background-size: 400% 400%;
+      animation: gradient 8s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      text-align: center;
+    }
+
+    .login-container img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #c62828;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #c62828;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #8e0000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-content">
+    <div class="login-container">
+      <img src="/static/dp_logo.png" alt="DATAPROTECT logo">
+      <h2>Connexion Stagiaire</h2>
+      <form method="POST">
+        <input name="email" type="email" placeholder="Email professionnel" required>
+        <input name="password" type="password" placeholder="Mot de passe" required>
+        <button type="submit">Connexion</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 DATAPROTECT - Plateforme Stagiaires
+  </footer>
+</body>
+</html>

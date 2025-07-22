@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Vérification 2FA - DATAPROTECT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(-45deg, #c62828, #ffffff, #c62828, #ffffff);
+      background-size: 400% 400%;
+      animation: gradient 8s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .otp-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      text-align: center;
+    }
+
+    .otp-container h2 {
+      color: #c62828;
+      margin-bottom: 10px;
+    }
+
+    .otp-container p {
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #c62828;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #8e0000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-content">
+    <div class="otp-container">
+      <h2>Vérification 2FA</h2>
+      <p>Un code à 4 chiffres a été envoyé à votre email.</p>
+
+      <form method="POST" action="/verify_otp">
+        <input name="otp" placeholder="Entrer le code OTP" maxlength="4" required>
+        <button type="submit">Vérifier</button>
+    <button type="button" onclick="sendOTP()">Renvoyer le code</button>
+</form>
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 DATAPROTECT - Sécurité des comptes
+  </footer>
+
+  <script src="/static/otp.js"></script>
+</body>
+</html>
