@@ -8,7 +8,12 @@ app = Flask(__name__)
 app.secret_key = "ctf-secret"
 
 
-limiter = Limiter(app, key_func=get_remote_address, default_limits=["1 per minute"])
+# Nouvelle syntaxe correcte pour flask-limiter >= 3.x
+limiter = Limiter(
+    key_func=get_remote_address,
+    default_limits=["1 per minute"]
+)
+limiter.init_app(app)
 
 USER_EMAIL = "cisco@dataprotect.ma"
 USER_PASSWORD = "password123"
