@@ -11,7 +11,7 @@ app.secret_key = "ctf-secret"
 # Nouvelle syntaxe correcte pour flask-limiter >= 3.x
 limiter = Limiter(
     key_func=get_remote_address,
-    default_limits=["1 per minute"]
+    default_limits=["100 per minute"]
 )
 limiter.init_app(app)
 
