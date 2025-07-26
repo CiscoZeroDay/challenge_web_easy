@@ -7,6 +7,12 @@ Ce challenge consiste à exploiter un site web dont le système d'authentificati
 __NB : Niveau du challenge : Facile__
 Bien que ce challenge soit de niveau **facile**, une connaissance préalable du fonctionnement du **MFA (Multi-Factor Authentication)** et de ses vulnérabilités est recommandée pour bien le comprendre et le résoudre.
 
+**⚠️ Avertissement ⚠️**
+
+Le **brute force** est strictement interdit sur ce challenge. *Toute tentative excessive d'accès ou d'essai de codes à répétition sera détectée automatiquement.*
+En cas d'abus, *vous serez bannie de la plateforme, et vous ne pourrez plus retenter ce challenge.*
+Merci de respecter l'esprit du CTF et de privilégier une approche logique et méthodique.
+
 ## 2- Description du challenge
 __Nom du challenge : Ooops-T-P Leakage__
 
@@ -36,6 +42,7 @@ Selon la description du challenge, le développeur a mal implémenté le mécani
 Cependant, nous ne savons pas encore comment identifier ou exploiter cette faille.
 
 **Vulnérabilités récurrentes dans le MFA (Multi-Factor Authentication)**
+
 ![Page de Login](./static/2.png)
 ![Page de Login](./static/3.png)
 
@@ -51,6 +58,7 @@ Tutoriel 1 : Utilisation de l’inspecteur de votre navigateur
 ![Page de Login](./static/4.png)
 
 **Step 1 : Connectes-toi avec l'identifiant trouvé**
+
 ![Page de Login](./static/a.png)
 
 **Step 2 : Capturer le code OTP (One Time Password !)**
@@ -64,11 +72,13 @@ Comme nous n’avons pas accès à la boîte mail du compte, nous allons exploit
 **Step 3 : Vérifier les requêtes réseaux**
 
 **1 - Va dans l’onglet *Network* des outils de développement.**
+
 ![Page de Login](./static/c.png)
 
 **2 - Recharge la page (Ctrl + R ou F5)**
 
 **3 - Observe les requêtes qui s’affichent, en particulier celles marquées XHR ou liées à des API.**
+
 ![Page de Login](./static/d.png)
 *Clique la requête appelée /api/send_otp ou équivalente.*
 
@@ -85,6 +95,7 @@ Comme nous n’avons pas accès à la boîte mail du compte, nous allons exploit
 **Step 4: Entrez le code OTP**
 
 *Saisissez le code OTP que vous avez trouvé dans l’onglet Response, puis cliquez sur **"Vérifier"** :*
+
 ![Page de Login](./static/e.png)
 
 **Step 5 : Si vous êtes arrivé jusqu'ici**, *félicitations.!*
@@ -94,16 +105,19 @@ Comme nous n’avons pas accès à la boîte mail du compte, nous allons exploit
 **Explorez le Dashboard**
 
 Prenez le temps de visiter toutes les pages disponibles. Vous devriez tomber sur ceci :
+
 ![Page de Login](./static/f.png)
 
 ## 4 - Déchiffrer le Flag
 
 *Sur cette page, un flag est visible, mais il semble être encodé :*
+
 ![Page de Login](./static/i.png)
 
 ## 5 - Utiliser CyberChef
 
 **Le texte semble être encodé en Base64. Rendez-vous sur CyberChef et utilisez la recette *From Base64.***
+
 ![Page de Login](./static/j.png)
 
 **Félicitations Hacker !**
