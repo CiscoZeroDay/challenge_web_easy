@@ -91,10 +91,10 @@
   <div class="main-content">
     <div class="otp-container">
       <h2>Vérification 2FA</h2>
-      <p>Un code à 4 chiffres a été envoyé à votre email.</p>
+      <p>Veuillez entrez le code envoyé à votre email.</p>
 
       <form method="POST" action="/verify_otp">
-        <input name="otp" placeholder="Entrer le code OTP" maxlength="4" required>
+        <input name="otp" placeholder="Entrer le code OTP" maxlength="8" required>
         <button type="submit">Vérifier</button>
     <button type="button" onclick="sendOTP()">Renvoyer le code</button>
 </form>
