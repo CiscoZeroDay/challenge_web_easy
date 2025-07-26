@@ -24,8 +24,7 @@ Tu as trouvé par hasard les identifiants d’un stagiaire chez DataProtect, éc
 
 **Mot de passe : password123**
 
-Ta mission est de te connecter à la plateforme réservée au stagiaire via ce lien :
-https://webctf.pythonanywhere.com/
+Ta mission est de te connecter à la plateforme réservée au stagiaire:
 
 Le site utilise une authentification à deux facteurs (2FA) pour renforcer la sécurité, mais le développeur a commis une erreur dans son implémentation.
 
