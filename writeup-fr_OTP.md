@@ -12,6 +12,13 @@ Bien que ce challenge soit de niveau **facile**, une connaissance préalable du 
 Le **brute force** est strictement interdit sur ce challenge. *Toute tentative excessive d'accès ou d'essai de codes à répétition sera détectée automatiquement.*
 En cas d'abus, *vous serez bannie de la plateforme, et vous ne pourrez plus retenter ce challenge.*
 Merci de respecter l'esprit du CTF et de privilégier une approche logique et méthodique.
+------------------------------------------------------------------------------------------------------------------------
+
+## Télécharger l'image docker du challenge
+<pre>docker pull razafindraibe/otp_leaker:latest</pre>
+
+## Lancer le conteneur
+<pre>docker run -it -p 5000:5000 razafindraibe/otp_leaker:latest</pre>
 
 ## 2- Description du challenge
 __Nom du challenge : Ooops-T-P Leakage__
